@@ -1,5 +1,5 @@
 NAME = minitalk.a
-SRC = client.c server.c
+SRC = client.c server.c ft_atoi.c
 OBJ = $(SRC:.c=.o)
 FLAG =
 RM = rm -fr
@@ -9,11 +9,11 @@ all: $(NAME) server client
 $(NAME): $(OBJ) printf/libftprintf.a
 	ar -rc $(NAME) $(OBJ)
 
-server: server.o printf/libftprintf.a
-	cc $(FLAG) -o server server.o printf/libftprintf.a
+server: server.o ft_atoi.o printf/libftprintf.a
+	cc $(FLAG) -o server server.o ft_atoi.o printf/libftprintf.a
 
-client: client.o printf/libftprintf.a
-	cc $(FLAG) -o client client.o printf/libftprintf.a
+client: client.o ft_atoi.o printf/libftprintf.a
+	cc $(FLAG) -o client client.o ft_atoi.o printf/libftprintf.a
 
 %.o: %.c
 	cc $(FLAG) -c $< -o $@

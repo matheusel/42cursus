@@ -10,5 +10,5 @@ int	main(int argc, char *argv[])
 		return -1;
 	}
 
-	pid = *argv[1];
+	pid = ft_atoi(argv[1]);
 }

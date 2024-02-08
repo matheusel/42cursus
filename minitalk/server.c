@@ -1,8 +1,12 @@
 #include "minitalk.h"
 
-void	handler(int	sig)
+void	handler(int	sig, siginfo_t *info, void *context)
 {
-	ft_printf("handler");
+	static int	i = 0;
+	static char	x = 0;
+
+	ft_printf("%s", "chegou man");
+
 }
 
 int	main(void)
@@ -12,8 +16,7 @@ int	main(void)
 
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
-	sa.sa_handler = handler;
-
+	sa.sa_sigaction = &handler;
 	ft_printf("PID: %i\n", pid = getpid());
 	if (pid < 0)
 	{
