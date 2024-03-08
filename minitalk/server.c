@@ -1,35 +1,43 @@
 #include "minitalk.h"
 
-void	handler(int	sig, siginfo_t *info, void *context)
+void	handler(int	sig)
 {
+	static char	c = 0;
 	static int	i = 0;
-	static char	x = 0;
 
-	ft_printf("%s", "chegou man");
-
+	if(sig == SIGUSR1)
+	{
+		sig |= (1 << i);
+		ft_printf("%s", "Recebido S1");
+	}
+	else if(sig == SIGUSR2)
+	{
+		sig |= (0 << i);
+		ft_printf("%s", "Recebido S1");
+	}
+	i++;
+	if(i == 8)
+	{
+		ft_printf("%c", c);
+	}
 }
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
 	int	pid;
-	struct	sigaction	sa;
 
-	sigemptyset(&sa.sa_mask);
-	sa.sa_flags = SA_SIGINFO;
-	sa.sa_sigaction = &handler;
-	ft_printf("PID: %i\n", pid = getpid());
+	ft_printf("\nPID: %i\n", pid = getpid());
 	if (pid < 0)
 	{
 		ft_printf("\nErro: Não foi possível obter o PID\n");
-		return -1;
+		return 0;
 	}
-	ft_printf("\nAguardando por uma mensagem...\n");
+	ft_printf("\nAguardando mensagem...\n");
 	while (1)
 	{	
-		if (sigaction(SIGUSR1, &sa, NULL) < 0)
-			ft_printf("\nErro: Não foi possível obter o PID\n");
-		else if (sigaction(SIGUSR2, &sa, NULL) < 0)
-			ft_printf("\nErro: Não foi possível obter o PID\n");
+		signal(SIGUSR1, handler);
+		signal(SIGUSR2, handler);
 		pause();
 	}
+	return (0);
 }
