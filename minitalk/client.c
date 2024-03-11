@@ -21,6 +21,7 @@ void	send(int pid, char c)
 
 int	main(int argc, char *argv[])
 {
+	(void)argc;
 	int	pid;
 	int i;
 

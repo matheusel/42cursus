@@ -1,7 +1,7 @@
 NAME = minitalk.a
 SRC = client.c server.c ft_atoi.c
 OBJ = $(SRC:.c=.o)
-FLAG =
+FLAG = -Wall -Wextra -Werror
 RM = rm -fr
 
 all: $(NAME) server client
