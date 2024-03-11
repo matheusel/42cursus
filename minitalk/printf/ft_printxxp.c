@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printxxp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el <mc-m-el-@student.42.rio>          +#+  +:+       +#+        */
+/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:22:00 by mc-m-el           #+#    #+#             */
-/*   Updated: 2023/12/12 20:57:48 by mc-m-el          ###   ########.fr       */
+/*   Updated: 2024/03/11 18:37:19 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,10 @@ static int	ft_main(unsigned long n, char c)
 	}
 	else if (n < 10)
 		ft_printchar(n + 48);
+	else if (c == 'x' || c == 'p')
+		ft_printchar(n + 87);
 	else
-		if (c == 'x' || c == 'p')
-			ft_printchar(n + 87);
-		else
-			ft_printchar(n + 55);
+		ft_printchar(n + 55);
 	return (0);
 }
 
