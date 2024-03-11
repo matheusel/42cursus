@@ -2,23 +2,23 @@
 
 void	handler(int	sig)
 {
-	static char	c = 0;
-	static int	i = 0;
+	static char	c;
+	static int	i;
 
 	if(sig == SIGUSR1)
 	{
-		sig |= (1 << i);
-		ft_printf("%s", "Recebido S1");
+		c |= (1 << i);
 	}
 	else if(sig == SIGUSR2)
 	{
-		sig |= (0 << i);
-		ft_printf("%s", "Recebido S1");
+		c |= (0 << i);
 	}
 	i++;
 	if(i == 8)
 	{
 		ft_printf("%c", c);
+		c = 0;
+		i = 0;
 	}
 }
 

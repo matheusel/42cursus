@@ -7,7 +7,7 @@ void	send(int pid, char c)
 
 	i = 0;
 	bit = 0;
-	while(bit < 8)
+	while(i < 8)
 	{
 		bit = (c >> i) & 1;
 		if(bit == 1)
@@ -15,7 +15,7 @@ void	send(int pid, char c)
 		else if (bit == 0)
 			kill(pid, SIGUSR2);
 		usleep(600);
-		bit++;
+		i++;
 	}
 }
 
@@ -38,5 +38,5 @@ int	main(int argc, char *argv[])
 	}
 	send(pid, '\n');
 
-
+	return (0);
 }
