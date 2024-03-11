@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_printpointer.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el <mc-m-el-@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 17:46:35 by mc-m-el           #+#    #+#             */
-/*   Updated: 2024/03/11 20:00:15 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/12/08 15:21:37 by mc-m-el           #+#    #+#             */
+/*   Updated: 2023/12/12 20:57:59 by mc-m-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-int	main(int argc, char *argv[])
+int	ft_printpointer(void *p)
 {
-	t_stack	*a;
-	t_stack	*b;
-
-
-	return (0);
+	if (!p)
+		return (ft_printstr("(nil)"));
+	return (ft_printstr("0x") + ft_printxxp((unsigned long long)p, 'p'));
 }

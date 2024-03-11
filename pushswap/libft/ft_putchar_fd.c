@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 17:46:35 by mc-m-el           #+#    #+#             */
-/*   Updated: 2024/03/11 20:00:15 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/11/13 15:32:00 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/13 17:51:10 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char *argv[])
+void	ft_putchar_fd(char c, int fd)
 {
-	t_stack	*a;
-	t_stack	*b;
-
-
-	return (0);
+	write(fd, &c, 1);
 }

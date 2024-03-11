@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el <mc-m-el-@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 17:46:35 by mc-m-el           #+#    #+#             */
-/*   Updated: 2024/03/11 20:00:15 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/25 22:03:57 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/12 22:34:33 by mc-m-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char *argv[])
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	t_stack	*a;
-	t_stack	*b;
-
-
-	return (0);
+	if (!dst && !src)
+		return (0);
+	if (dst < src)
+		return (ft_memcpy(dst, src, n));
+	while (n--)
+		((char *)dst)[n] = ((char *)src)[n];
+	return (dst);
 }
