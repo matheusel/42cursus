@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/11/13 17:36:53 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/13 17:51:49 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#include "libft.h"
 
-int main(int argc, char *argv[])
+void	ft_putnbr_fd(int n, int fd)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
-	return (0);
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		write(fd, "-", 1);
+	}
+	if (n < 10)
+	{
+		n = n + '0';
+		write(fd, &n, 1);
+	}
+	else
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
+	}
 }

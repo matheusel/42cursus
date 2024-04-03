@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el- <mc-m-el-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/16 19:03:57 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/10/25 20:02:24 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#include "libft.h"
 
-int main(int argc, char *argv[])
+int	ft_isdigit(int c)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
-	return (0);
+	return (c >= '0' && c <= '9');
 }

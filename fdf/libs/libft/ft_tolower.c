@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el- <mc-m-el-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/22 17:42:23 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/10/22 17:44:22 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#include "libft.h"
 
-int main(int argc, char *argv[])
+int	ft_tolower(int c)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

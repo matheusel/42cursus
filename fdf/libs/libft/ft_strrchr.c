@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el- <mc-m-el-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/31 22:39:58 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/09 16:02:56 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#include "libft.h"
 
-int main(int argc, char *argv[])
+char	*ft_strrchr(const char *str, int c)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
+	int	i;
+
+	i = ft_strlen(str);
+	while (str[i] != (char) c && i > 0)
+		i--;
+	if (str[i] == (char)c)
+		return ((char *)str + i);
 	return (0);
 }

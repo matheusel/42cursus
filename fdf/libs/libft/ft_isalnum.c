@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el <mc-m-el-@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/16 19:10:46 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/10 23:12:19 by mc-m-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#include "libft.h"
 
-int main(int argc, char *argv[])
+int	ft_isalnum(int c)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'))
+		return (1);
 	return (0);
 }

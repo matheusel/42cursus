@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2024/04/02 19:31:31 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2024/04/02 21:04:43 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
+#ifndef FDF_H
+# define FDF_H
 
-int main(int argc, char *argv[])
-{
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
-	return (0);
-}
+/*-------------LIBRARIES INCLUDED-------------*/
+
+# include "../libs/printf/ft_printf.h"
+# include "../libs/libft/libft.h"
+# include "../libs/getnextline/get_next_line.h"
+
+/*-------------STRUCT TYPEDEFS-------------*/
+
+int	exit_error(int num);
+
+#endif

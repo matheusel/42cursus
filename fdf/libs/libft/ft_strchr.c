@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.c                                              :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mc-m-el <mc-m-el-@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 19:31:37 by mc-m-el-          #+#    #+#             */
-/*   Updated: 2024/04/02 20:32:13 by mc-m-el-         ###   ########.fr       */
+/*   Created: 2023/10/30 17:39:46 by mc-m-el-          #+#    #+#             */
+/*   Updated: 2023/11/14 12:02:54 by mc-m-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/fdf.h"
-
-int main(int argc, char *argv[])
+char	*ft_strchr(const char *s, int c)
 {
-	(void) argv;
-	if(argc != 2)
-		return(exit_error(1));
+	while (*s && (*s != (char) c))
+		s++;
+	if (*s == (char)c)
+		return ((char *)s);
 	return (0);
 }
