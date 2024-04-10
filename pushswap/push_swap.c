@@ -6,17 +6,14 @@
 /*   By: mc-m-el- <mc-m-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:46:35 by mc-m-el           #+#    #+#             */
-/*   Updated: 2024/03/11 20:00:15 by mc-m-el-         ###   ########.fr       */
+/*   Updated: 2024/04/10 20:32:56 by mc-m-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "include/push_swap.h"
 
 int	main(int argc, char *argv[])
 {
-	t_stack	*a;
-	t_stack	*b;
-
-
+	ft_printf("OLA");
 	return (0);
 }
