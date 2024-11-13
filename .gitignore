@@ -1,0 +1,9 @@
+*.dSYM
+.DS_Store
+.history
+.vscode
+README.md
+*.pdf
+*.o
+*.a
+*.txt
