@@ -22,7 +22,7 @@
 | [printf](https://github.com/matheusel/42cursus/tree/main/printf) | 01 | 100 |
 | [get_next_line](https://github.com/matheusel/42cursus/tree/main/getnextline) | 01 | 125 |
 | [minitalk](https://github.com/matheusel/42cursus/tree/main/minitalk) | 02 | 115 |
-| [minishell](https://github.com/matheusel/42cursus/tree/main/minishell) | 02 | 100 |
+| [minishell](https://github.com/matheusel/42cursus/tree/main/minishell) | 03 | 100 |
 
 
 </div>
